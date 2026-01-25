@@ -19,7 +19,7 @@ const ProjectSliderSlider = () => {
     const xTransform = useTransform(scrollYProgress, [0, 1], ["0%", "-120%"])
     const [frozenX, setFrozenX] = useState<string | null>(null)
     const [coordinates, setCoordinates] = useState({ x: 0, y: 0 });
-    const handleClick = (e, itemIndex) => {
+    const handleClick = (e: React.MouseEvent<HTMLDivElement>, itemIndex: number) => {
         const element = e.currentTarget // Access the moving element
         if (!element) return;
 
