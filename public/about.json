@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "role": "Frontend Architect",
+        "headline": "The Frontend Architect: Crafting Performance & UX",
+        "icon": "🖳",
+        "content": "I am a dedicated **Frontend Developer** with a passion for transforming complex design concepts into high-performance, accessible, and responsive user interfaces. My core philosophy centers on optimizing the **user experience (UX)** through clean, maintainable, and well-documented code. I prioritize **Cross-Browser Compatibility** and achieving high scores in web vitals metrics like **LCP** and **FID**."
+    },
+    {
+        "id": 2,
+        "role": "Technical Specialist",
+        "headline": "Mastering the Modern Ecosystem",
+        "icon": "💾",
+        "content": "My primary stack revolves around **React** and **TypeScript**, augmented by advanced state management solutions like **Redux Toolkit** and **Zustand**. I specialize in building **Server-Side Rendered (SSR)** and **Static Generated (SSG)** applications using **Next.js** to enhance initial load times and SEO. I am proficient in **Tailwind CSS** and leveraging utility-first approaches for rapid, scalable styling."
+    },
+    {
+        "id": 3,
+        "role": "Project Discipline",
+        "headline": "Integration, Discipline, and Growth",
+        "icon": "⚙️",
+        "content": "I have extensive experience consuming and integrating with diverse **RESTful APIs** and **GraphQL** endpoints. I maintain code quality through robust testing practices, utilizing **Jest** and **React Testing Library** for unit and integration tests. I am adept at managing deployment pipelines via **Vercel/Netlify** and collaborating effectively using **Git/GitHub** best practices, ensuring smooth **CI/CD** workflows."
+    }
+]

@@ -1,0 +1,70 @@
+[
+    {
+        "id": 1,
+        "name": "MENTORA",
+        "excerpt": "Al Quiz & Flashcard Generator",
+        "timeline": "Dec 2024-Feb 2025",
+        "description": "Engineered a full-stack application with Next.js and TypeScript, integrating Google's Gemini Al to generate dynamic quizzes and flashcards from user-provided topics. Implemented a sophisticated study system allowing users to track card difficulty, receive personalized review sessions, and retake exams to reinforce learning. Secured the application with NextAuth.js for Google, GitHub, and email logins, persisting user data and progress in a scalable Supabase PostgreSQL database.",
+        "technologies_tools": [
+            "Next.js",
+            "TypeScript",
+            "Gemini AI (Google)",
+            "NextAuth.js",
+            "Supabase PostgreSQL"
+        ],
+        "images": [
+            "/quiz1.png",
+            "/quiz3.png",
+            "/quiz4.png"
+        ],
+        "video": "/mentora-demo.mp4"
+    },
+    {
+        "id": 2,
+        "name": "HYPE STATION",
+        "excerpt": "e-commerce platform",
+        "timeline": "Jul 2024-Aug 2024",
+        "description": "Developed a dynamic e-commerce store using React.js and Tailwind CSS, enabling users to create accounts, browse by category/brand, and manage carts/wishlists. Streamlined the checkout process by integrating Stripe for secure payment processing, reducing friction and improving conversion rates. Enhanced product discoverability by building advanced filtering for price, brand, and size, creating a smooth and intuitive shopping journey.",
+        "technologies_tools": [
+            "React.js",
+            "Tailwind CSS",
+            "Stripe"
+        ],
+        "images": [
+            "/ecommrcehero.png",
+            "/cart1.png",
+            "/cart.png"
+        ],
+        "video": "/ecomerce-demo-1.mp4"
+    },
+    {
+        "id": 3,
+        "name": "CLINICLY",
+        "excerpt": "manage your appointments",
+        "timeline": "Oct 2024-Nov 2024",
+        "description": "Built a comprehensive management portal with React.js and DaisyUI, featuring role-based dashboards for patients (book/delete appointments) and admins (manage doctors/schedules). Implemented Firebase authentication and a real-time database to securely handle user data and a dynamic weekly appointment scheduling system.",
+        "technologies_tools": [
+            "React.js",
+            "DaisyUI",
+            "Firebase (Authentication & Real-time Database)"
+        ],
+        "images": [
+            "/clinic1.png",
+            "/clinic2.png",
+            "/clinic3.png"
+        ],
+        "video": "clinic-demo.mp4"
+    },
+    {
+        "id": 4,
+        "name": "React-loadly-Showcase (open source)",
+        "excerpt": "Interactive React component showcase",
+        "timeline": "Oct 2025",
+        "description": "Developed an interactive React showcase platform demonstrating modern UI components and loading animations. Implemented dynamic content filtering and smooth state transitions for enhanced user engagement. Built with responsive design principles to ensure optimal viewing across all device sizes. Features a clean, minimalist interface that highlights React's capabilities for creating engaging user experiences.",
+        "technologies_tools": [
+            "React"
+        ],
+        "images": [],
+        "video": ""
+    }
+]
