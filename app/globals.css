@@ -29,6 +29,19 @@
   --vhs-item-width: 80vw;
   --interlettrage-h2: 2vw;
   --marge-interlettrage-h2: -2vw;
+  /* UI Neutrals */
+  --bg-canvas: #CDCDCD;
+  --grid-dot: #B8B8B8;
+  --window-bg: #FFFFFF;
+  --window-border-dark: #818181;
+  --window-border-light: #FFFFFF;
+  --header-text: #111111;
+  
+  /* Accent Colors */
+  --terminal-bg: #000000;
+  --terminal-green: #18DD3D;
+  --neon-pink: #FE41A0;
+  --cobalt-blue: #0101FE;
 }
 
 .perspective-distant {
@@ -38,10 +51,10 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-inter);
 }
+
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -53,8 +66,8 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
+
 
 .grain-effect {
   z-index: 4000;
@@ -394,4 +407,69 @@ a {
   display: flex;
   position: absolute;
   inset: 0%;
+}
+
+
+.window {
+  background: var(--window-bg);
+  border: 2px solid var(--window-border-dark);
+  box-shadow: 1px 1px 0px 0px #000; /* Sharp hard shadow */
+  display: inline-flex;
+  flex-direction: column;
+  min-width: 200px;
+  position: absolute; /* Allows for the scattered layout in your image */
+}
+
+/* The Header bar */
+.header {
+  background: var(--window-bg);
+  border-bottom: 2px solid var(--window-border-dark);
+  padding: 4px 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: lowercase;
+  color: var(--header-text);
+}
+
+.content {
+  padding: 0; /* Images should be flush, text needs internal padding */
+  display: flex;
+  flex-direction: column;
+}
+
+.image_content img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  image-rendering: pixelated; /* Keeps low-res images looking sharp */
+}
+
+/* Terminal / Text Container */
+.terminal_content {
+  background: var(--terminal-bg);
+  color: var(--terminal-green);
+  padding: 15px;
+  font-size: 13px;
+  line-height: 1.4;
+  min-height: 100px;
+}
+
+.ui_link {
+  background: var(--bg-canvas);
+  border: 2px solid var(--window-border-dark);
+  padding: 5px 15px;
+  font-size: 12px;
+  cursor: pointer;
+  box-shadow: inset 1px 1px 0px var(--window-border-light);
+}
+
+.ui_link:active {
+  box-shadow: inset 2px 2px 0px #000;
+  background: #bbb;
 }

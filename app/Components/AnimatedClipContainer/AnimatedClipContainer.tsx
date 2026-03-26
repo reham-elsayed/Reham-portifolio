@@ -8,28 +8,28 @@ const AnimatedClipContainer = () => {
     const ref = useRef<HTMLDivElement>(null)
     const { scrollYProgress } = useScroll()
     const maxHeight = typeof window !== "undefined" ? window.innerHeight * 0.5 : 400
-    const height = useTransform(scrollYProgress, [0, .2], ["2%", "80%"])
-    const width = useTransform(scrollYProgress, [0, .2], ["85%", "100%"])
+    const height = useTransform(scrollYProgress, [0, .2], ["2%", "70%"])
+    const width = useTransform(scrollYProgress, [0, .2], ["70%", "80%"])
 
 
-    const y = useTransform(scrollYProgress, [.2, .5], [0, 150]);//translate down
+    const y = useTransform(scrollYProgress, [.1, .2], [0, 150]);//translate down
     const invertedY = useTransform(y, (v) => -v);
     const weight = useTransform(scrollYProgress, [0, .2, .5], [900, 700, 300]); // font weight
     const widthT = useTransform(scrollYProgress, [0, .2, .5], [160, 100, 85]); // font width
-    const fontSize = useTransform(scrollYProgress, [0, .5], ["3.5vw", "1vw"]); // font size
+    const fontSize = useTransform(scrollYProgress, [0, .5], ["clamp(24px, 4vw, 80px)", "clamp(14px, 1.5vw, 24px)"]); // font size
 
     return (
-        <div className=" bg-gray-200">
+        <div className=" bg-[#e5e2d6]">
 
 
-            <div className="bg-gray-200 w-[90%]  mx-auto">
+            <div className="bg-[#e5e2d6] w-[90%]  mx-auto">
                 <div className="relative  h-[470vh] ">
                     <div className="   sticky left-0 right-0 top-0 w-full h-[100vh] overflow-hidden flex items-stretch justify-center">
 
                         <div className="overflow-hidden relative flex flex-col flex-1 items-center self-stretch justify-center " >
                             <div
 
-                                className={` bg-red-100 w-full wrapper-h1 `}>
+                                className={`bg-[#e5e2d6] w-full z-10 wrapper-h1 p-3`}>
                                 {/* Big scroll space so you can see effect */}
                                 <motion.div
                                     initial={{ translateY: 50 }}
@@ -50,7 +50,7 @@ const AnimatedClipContainer = () => {
 
                             <div
 
-                                className={` bg-red-100  w-full wrapper-h1 `}>
+                                className={`bg-[#e5e2d6] w-full z-10 wrapper-h1 p-3`}>
                                 {/* Big scroll space so you can see effect */}
                                 <motion.div
                                     initial={{ translateY: 50 }}
@@ -93,7 +93,7 @@ const AnimatedClipContainer = () => {
 
                             <div
 
-                                className={` bg-red-100  w-full wrapper-h1 `}>
+                                className={`bg-[#e5e2d6] w-full z-10 wrapper-h1 p-3`}>
                                 {/* Big scroll space so you can see effect */}
                                 <motion.div
 
@@ -112,7 +112,7 @@ const AnimatedClipContainer = () => {
                             </div>
                             <div
 
-                                className={` bg-red-100  w-full wrapper-h1 `}>
+                                className={`bg-[#e5e2d6] w-full z-10 wrapper-h1 p-3`}>
                                 {/* Big scroll space so you can see effect */}
                                 <motion.div
 

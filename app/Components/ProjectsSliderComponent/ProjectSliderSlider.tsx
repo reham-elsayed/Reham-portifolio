@@ -5,6 +5,7 @@ import ThreeColumnGrid from '../ThreeColumnGrid/ThreeColumnGrid'
 import { useLenis } from '../LenisSetup/LenisSetup'
 import projects from '@/public/projects.json'
 import Image from 'next/image'
+import WindowFrame from '../WindowCardComposites/WindowFrame/WindowFrame'
 
 const ProjectSliderSlider = () => {
     const [openDetails, setOpenDetails] = useState(false)
@@ -16,7 +17,7 @@ const ProjectSliderSlider = () => {
         offset: ["start start", "end end"]
     })
 
-    const xTransform = useTransform(scrollYProgress, [0, 1], ["0%", "-120%"])
+    const xTransform = useTransform(scrollYProgress, [0, 1], ["0%", `-${(projects.length - 1) * 20}%`])
     const [frozenX, setFrozenX] = useState<string | null>(null)
     const [coordinates, setCoordinates] = useState({ x: 0, y: 0 });
     const handleClick = (e: React.MouseEvent<HTMLDivElement>, itemIndex: number) => {
@@ -77,16 +78,16 @@ const ProjectSliderSlider = () => {
                 style={{ perspective: 1000 }}
                 className='sticky top-0 h-screen  w-full flex flex-col justify-center items-stretch gap-6  pb-[2.4vw] origin-top overflow-hidden'
             >
-                <div className='w-full mx-auto  md:w-[90vw] h-[60vh] flex'>
-                    <div className='relative h-full  '>
+                <div className='w-full mx-auto md:w-[90vw] h-[70vh] flex overflow-visible'>
+                    <div className='relative h-full w-full'>
                         <motion.div
                             style={{ x }}
-                            className='relative  flex justify-center h-full items-stretch mb-4'>
+                            className='relative flex justify-start h-full items-stretch mb-4 gap-8 w-max px-[5vw]'>
                             {projects.map((project, i) =>
                                 <div
                                     onClick={(e) => handleClick(e, i)}
                                     key={i}
-                                    className='h-full w-full relative'>
+                                    className='h-full w-[80vw] md:w-[450px] flex-shrink-0 relative'>
 
                                     <div
                                         style={(() => {
@@ -106,14 +107,21 @@ const ProjectSliderSlider = () => {
                                                 transform: `translateX(${xTranslate}px)`,
                                             };
                                         })()}
-                                        className={` w-full h-full 
-                                         w-auto transition-all duration-1000 relative `}
+                                        className={` w-full h-full transition-all duration-1000 relative `}
                                     >
                                         {/* Card Content - Animated out when open */}
-                                        <div
+                                      <WindowFrame style={{ 
+                                          position: 'relative', 
+                                          width: '100%', 
+                                          height: '100%',
+                                          opacity: openDetails && i === index ? 0 : 1,
+                                          pointerEvents: openDetails && i === index ? 'none' : 'auto',
+                                          transition: 'opacity 0.5s'
+                                      }}>
+                                          <div
                                             className={`
-                                                gap-1 relative bg-[#e5e2d6] border-2 border-[#292f33] rounded-lg p-4 h-full flex flex-col 
-                                                hover:scale-[1.02] hover:-translate-y-1 transition-all duration-300 shadow-[4px_4px_0px_#292f33] hover:shadow-[6px_6px_0px_#292f33]
+                                                gap-1 relative bg-[#e5e2d6] p-4 h-full w-full flex flex-col 
+                                                hover:scale-[1.02] hover:-translate-y-1 transition-all duration-300
                                                 transform
                                                 ${openDetails && i === index ? '-translate-y-[150%] opacity-0' : 'translate-y-0 opacity-100'}
                                             `}
@@ -145,16 +153,17 @@ const ProjectSliderSlider = () => {
                                             <div className='absolute top-2 right-2 w-2 h-2 bg-[#292f33] rounded-full opacity-20'></div>
                                         </div>
 
+                                      </WindowFrame>
                                         {/* Expanded Details Block */}
                                         {openDetails && i === index && (
-                                            <div className="w-[90vw] h-[120%] col-span-4 absolute  inset-2 flex flex-col">
+                                            <div className="w-[90vw] h-[120%] absolute inset-0 flex flex-col z-[100] bg-[#e5e2d6] shadow-2xl overflow-x-hidden">
                                                 {/* Visual Cue */}
-                                                <div className="w-full text-center py-2 ">
-                                                    <p className="text-sm font-bold text-[#4f52be] tracking-wider uppercase">
-                                                        Click anywhere to go back to projects
+                                                <div className="w-full text-center py-4 bg-[#4f52be]/10">
+                                                    <p className="text-sm font-bold text-[#4f52be] tracking-wider uppercase flex items-center justify-center gap-2">
+                                                        <span>←</span> Click anywhere to go back to projects <span>→</span>
                                                     </p>
                                                 </div>
-                                                <div className="flex-grow w-full h-full ">
+                                                <div className="flex-grow w-full h-full p-4 overflow-y-auto">
                                                     <ThreeColumnGrid projectid={project.id} />
                                                 </div>
                                             </div>

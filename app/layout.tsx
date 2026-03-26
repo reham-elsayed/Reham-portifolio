@@ -1,16 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
 import LenisSetup from "./Components/LenisSetup/LenisSetup";
-import { Roboto_Flex } from 'next/font/google'
-import CursorFollower from "./Components/CursorFollower/CursorFollower";
+import Navbar from "./Components/Navbar/Navbar";
 
-const robotoFlex = Roboto_Flex({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-roboto-flex',
-})
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -24,10 +20,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-
-      <body
-        className={`${robotoFlex.variable} antialiased`}
-      >
+      <body className={`${inter.variable} font-sans antialiased`}>
+        <Navbar />
         <LenisSetup>
           {children}
         </LenisSetup>
@@ -41,3 +35,4 @@ export default function RootLayout({
     </html>
   );
 }
+

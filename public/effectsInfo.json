@@ -1,0 +1,137 @@
+{
+  "app_meta": {
+    "name": "Vortex Text FX",
+    "tagline": "Pro-Level Typography for Canva Creators",
+    "description": "7 high-end SVG text engines to transform standard fonts into layered, textured, and 3D masterpieces.",
+    "primary_cta": "Open in Canva"
+  },
+  "global_engine_specs": {
+    "title": "App Effects Documentation",
+    "description": "This document describes all the effects available in the application, their behavior, and the configurable settings for each.",
+    "parameters": [
+      { "name": "text", "detail": "The actual words or characters to be rendered." },
+      { "name": "font", "detail": "The font family applied to the text (e.g., 'Open Sans')." },
+      { "name": "fontSize", "detail": "The size of the font in px (Range: 10–500, Default: 200)." },
+      { "name": "color", "detail": "The primary hex color for the text." },
+      { "name": "fontWeight", "detail": "The weight of the font - 'normal' or 'bold'." },
+      { "name": "letterSpacing", "detail": "The manual kerning adjustment between characters in px." }
+    ]
+  },
+  "effects_registry": [
+    {
+      "id": "horizontal-lines",
+      "display_name": "Lined",
+      "vibe": "Industrial / Technical",
+      "short_desc": "Generates a textured clipping mask using mathematical horizontal bars.",
+      "key_features": ["Adjustable Gap & Spacing", "Variable Line Thickness"],
+      "ui_color": "#818181",
+      "settings": [
+        { "name": "spacing", "detail": "Vertical distance between the center-lines (Default: 5)." },
+        { "name": "gap", "detail": "Empty space between each line (Default: 5)." },
+        { "name": "thickness", "detail": "Weight of the horizontal lines themselves (Default: 2)." }
+      ]
+    },
+    {
+      "id": "editorial-tech",
+      "display_name": "Risograph",
+      "vibe": "Print / Editorial",
+      "short_desc": "Simulates physical print bleed and grain for a dual-tone gradient aesthetic.",
+      "key_features": ["Edge Bleed Control", "Grain Intensity Logic", "Shadow Depth Layer"],
+      "ui_color": "#ec4899",
+      "settings": [
+        { "name": "gradientColorStart", "detail": "Light end of the gradient starting at the top-left (Default: '#c084fc')." },
+        { "name": "gradientColorEnd", "detail": "Deep end of the gradient at the bottom-right (Default: '#ec4899')." },
+        { "name": "gradientAngle", "detail": "Angle of the gradient in degrees, from 0–360 (Default: 135)." },
+        { "name": "grainIntensity", "detail": "Controls the strength of the noise texture from 0–100 (Default: 45)." },
+        { "name": "grainSize", "detail": "Noise frequency, where a smaller value produces finer grain (Default: 0.65)." },
+        { "name": "edgeBlur", "detail": "Creates a soft bleed at the shape boundaries in px (Default: 1.5)." },
+        { "name": "shadowColor", "detail": "Dark tone underneath for depth (Default: '#1e1b4b')." }
+      ]
+    },
+    {
+      "id": "extrude",
+      "display_name": "Extrude",
+      "vibe": "Retro / 90s",
+      "short_desc": "Stackable 3D layers with offset math for a classic arcade look.",
+      "key_features": ["Multi-Layer Stacking", "Custom Offset Step (X/Y)", "Layer Color Arrays"],
+      "ui_color": "#0101FE",
+      "settings": [
+        { "name": "layers", "detail": "Number of color layers to stack behind the base text (Default: 6)." },
+        { "name": "stepX / stepY", "detail": "Horizontal and vertical offset distance in px between each successive layer (Default: 3 / 3)." },
+        { "name": "thickness", "detail": "Applies a thickness adjustment scale for the extrusion (Default: 2)." },
+        { "name": "layerColors", "detail": "A list of colors used for the stacked layers behind the text." }
+      ]
+    },
+    {
+      "id": "inflated-text",
+      "display_name": "Inflated",
+      "vibe": "Modern / 3D",
+      "short_desc": "Balloon-like volume created through inner shadow and specular highlight computation.",
+      "key_features": ["Puff Amount Logic", "Specular Highlight Opacity", "Ground Drop Shadow"],
+      "ui_color": "#FE41A0",
+      "settings": [
+        { "name": "inflateAmount", "detail": "Blur radius used to computationally 'puff up' the underlying shape in px (Default: 8)." },
+        { "name": "highlightColor", "detail": "Color of the specular highlight at the top-left (Default: '#ffffff')." },
+        { "name": "highlightOpacity", "detail": "Transparency level of the highlight from 0–100 (Default: 90)." },
+        { "name": "shadowColor", "detail": "Dark underside color indicating the curvature of the form (Default: '#000000')." },
+        { "name": "shadowOpacity", "detail": "Transparency level of the underside shadow from 0–100 (Default: 35)." },
+        { "name": "dropShadowColor", "detail": "Color for the ground shadow (Default: '#00000066')." }
+      ]
+    },
+    {
+      "id": "fade-lines",
+      "display_name": "Fade",
+      "vibe": "Minimalist / Motion",
+      "short_desc": "Mathematical curve-based fading using sliced linear segments.",
+      "key_features": ["Linear to Fast Falloff Curves", "Directional Slicing", "Opacity Floor Control"],
+      "ui_color": "#FFFFFF",
+      "settings": [
+        { "name": "thickness", "detail": "Stroke width for the sliced lines (Default: 2)." },
+        { "name": "gap", "detail": "Interval separation between slices (Default: 3)." },
+        { "name": "direction", "detail": "The fading behavior — 'top-to-bottom', 'bottom-to-top', or 'center-out' (Default: 'bottom-to-top')." },
+        { "name": "curve", "detail": "Controls the aggressiveness of the fade (1 = linear, 3 = fast falloff) (Default: 2)." },
+        { "name": "minOpacity", "detail": "The minimum opacity reached at the end of the fade (Default: 0)." }
+      ]
+    },
+    {
+      "id": "text-pexel",
+      "display_name": "Pixel",
+      "vibe": "8-Bit / Gaming",
+      "short_desc": "Converts curves into an 8-bit retro aesthetic using custom grid alignment.",
+      "key_features": ["Custom Cell Size", "Negative Gap Overlap", "Background Block Logic"],
+      "ui_color": "#E8472A",
+      "settings": [
+        { "name": "pixelSize", "detail": "Size of each individual pixel cell in px (Default: 5)." },
+        { "name": "pixelGap", "detail": "Space between cells. Negative values create overlapping/bolder results (Default: 1)." },
+        { "name": "letterSpacing", "detail": "Additive spacing between separate characters (Default: 0)." },
+        { "name": "bgEnabled", "detail": "Toggle for a solid block directly beneath the text bounds (Default: false)." },
+        { "name": "bgColor", "detail": "Color for the background block (Default: '#E8472A')." },
+        { "name": "bgOpacity", "detail": "Transparency level of the block, 0–100 (Default: 100)." }
+      ]
+    },
+    {
+      "id": "word-buzzle",
+      "display_name": "Word Search",
+      "vibe": "Playful / Abstract",
+      "short_desc": "Generates a randomized alphanumeric matrix around your target word.",
+      "key_features": ["Dynamic Matrix (Rows/Cols)", "Seed-based Randomization", "Target Word Placement"],
+      "ui_color": "#F4F04E",
+      "settings": [
+        { "name": "cols / rows", "detail": "The grid dimensions across and down (Default: 12 / 8)." },
+        { "name": "cellSize", "detail": "Width/height constraints for each letter cell in px (Default: 80)." },
+        { "name": "fontSize", "detail": "Internal letter font scaling inside each cell (Default: 48)." },
+        { "name": "wordDirection", "detail": "The placement pattern — 'horizontal', 'vertical', or 'diagonal'." },
+        { "name": "wordRow / wordCol", "detail": "0-indexed starting coordinates for the target word (Default: 3 / 3)." },
+        { "name": "seed", "detail": "Randomization seed to reshuffle fillers without changing the word placement." }
+      ]
+    }
+  ],
+  "technical_integrity": {
+    "title": "Developer Grade Code",
+    "features": [
+      { "id": "01", "label": "SVG Output", "text": "Perfectly crisp at any size within Canva." },
+      { "id": "02", "label": "Performance", "text": "Optimized React hooks for real-time preview updates." },
+      { "id": "03", "label": "UI Kit", "text": "Native @canva/app-ui-kit integration for seamless UX." }
+    ]
+  }
+}

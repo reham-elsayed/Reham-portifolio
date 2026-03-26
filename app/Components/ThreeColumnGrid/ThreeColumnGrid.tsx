@@ -10,7 +10,7 @@ const ThreeColumnGrid = ({ projectid }: { projectid: number }) => {
     const projects = projectsData as any[];
 
     return (
-        <div className="w-[90vw] h-full">
+        <div className="w-full h-full">
             {/* Mobile: stacked vertically, each full width */}
             {/* Large screens: side by side - first takes 2/3, other two split remaining 1/3 */}
             <div className="flex flex-col lg:grid lg:grid-cols-4 gap-4 h-full">

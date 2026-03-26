@@ -4,8 +4,9 @@ import React, { useRef } from 'react'
 type TextChaingeColorSizeProps = {
     colorStart: string;
     colorEnd: string;
+    text:string;
 }
-const TextChangeColorSize = ({ colorStart, colorEnd }: TextChaingeColorSizeProps) => {
+const TextChangeColorSize = ({ colorStart, colorEnd ,text}: TextChaingeColorSizeProps) => {
     const ref = useRef(null)
     const { scrollYProgress } = useScroll({
         target: ref,
@@ -23,20 +24,20 @@ const TextChangeColorSize = ({ colorStart, colorEnd }: TextChaingeColorSizeProps
         <div className=''>
             <motion.div
                 ref={ref}
-                className='pt-20 h-[80vh] text-center items-center overflow-hidden container'
+                className='pt-10 h-[30vh] md:h-[50vh] text-center items-center overflow-hidden container flex m-auto'
             >
                 <motion.h1
-
                     style={{
                         opacity,
                         scale,
                         color,
                         fontSize: textSize,
+                        fontFamily: "Geist Variable, sans-serif",
                         transformStyle: "preserve-3d",
                         fontVariationSettings: `"wght" ${weight.get()},"wdth" ${width.get()}`,
                     }}
-                    className=' font-GeistVariable font-bold flex-1  will-change-scroll '
-                >EXPERTIRES</motion.h1>
+                    className='  font-bold flex-1  will-change-scroll '
+                >{text}</motion.h1>
             </motion.div>
         </div>
     )
