@@ -20,7 +20,7 @@ const ParallexCardWrapper = () => {
                 ref={ref}
                 style={{ backgroundColor: background }}
                 className='relative '>
-                <TextChangeColorSize colorStart="rgb(79, 82, 190)" colorEnd="rgb(41, 47, 51)" />
+                 <TextChangeColorSize text="Services" colorStart="rgb(79, 82, 190)" colorEnd="rgb(41, 47, 51)" />
                 {/* <CameramanAnimated /> */}
                 <ParallexCards />
             </motion.section>
