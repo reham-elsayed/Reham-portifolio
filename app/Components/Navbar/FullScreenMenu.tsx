@@ -1,9 +1,9 @@
 "use client";
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import Link from 'next/link';
 
-const menuVariants = {
+const menuVariants: Variants = {
     initial: {
         y: "-100%",
         borderBottomLeftRadius: "50%",
@@ -29,7 +29,7 @@ const menuVariants = {
     }
 };
 
-const linkVariants = {
+const linkVariants: Variants = {
     initial: { y: "120%", opacity: 0, rotateZ: 5 },
     animate: (i: number) => ({
         y: "0%",

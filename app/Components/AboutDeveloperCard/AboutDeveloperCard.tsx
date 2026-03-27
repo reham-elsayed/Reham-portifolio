@@ -55,7 +55,7 @@ export default function AboutDeveloperCard() {
                         </div>
                         
                         <p className="text-xs sm:text-sm md:text-base lg:text-lg font-bold leading-relaxed text-black">
-                            {data.content.split('**').map((part, i) => 
+                            {data.content.split('**').map((part: string, i: number) => 
                                 i % 2 === 1 ? (
                                     <strong key={i} className="bg-[#F4F04E] border-2 border-black px-1.5 py-0.5 mx-0.5 shadow-[2px_2px_0px_#000]">
                                         {part}
