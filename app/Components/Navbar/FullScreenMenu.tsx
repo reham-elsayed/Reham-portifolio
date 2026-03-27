@@ -83,11 +83,11 @@ const FullScreenMenu = ({ onClose }: Props) => {
                 <div className="overflow-hidden p-2">
                     <motion.div custom={2} variants={linkVariants} initial="initial" animate="animate" exit="initial" className="origin-bottom-left">
                         <Link 
-                            href="/projects" 
+                            href="/VibeType" 
                             onClick={onClose} 
                             className="text-6xl md:text-8xl lg:text-9xl font-black uppercase tracking-tighter hover:text-[#ff3b3b] hover:italic transition-all duration-300"
                         >
-                            Projects
+                            VibeType
                         </Link>
                     </motion.div>
                 </div>

@@ -30,9 +30,12 @@ export default function HeroVibeGrid() {
           dragConstraints={scrollRef} // Keeps it inside the max-w-7xl
           dragMomentum={false}
           custom={0} initial="hidden" animate="visible" variants={windowVariants}
-          className="absolute z-30 cursor-grab active:cursor-grabbing" 
+          className="absolute z-30 cursor-grab active:cursor-grabbing group" 
           style={{ left: '5%', top: '20%' }}
         >
+          <div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-black text-[#F4F04E] text-xs font-bold px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-50 border-2 border-black shadow-[2px_2px_0px_#000]">
+            Drag me!
+          </div>
           <WindowFrame title={heroData.tagline_card.role} style={{ width: '480px' }}>
             <div className="p-8 bg-white border-t-2 border-black flex flex-col gap-5 select-none">
               <h1 className="text-5xl font-black uppercase tracking-tighter leading-[0.85] text-black">
@@ -56,16 +59,21 @@ export default function HeroVibeGrid() {
           dragConstraints={scrollRef}
           dragMomentum={false}
           custom={1} initial="hidden" animate="visible" variants={windowVariants}
-          className="absolute z-10 cursor-grab active:cursor-grabbing" 
+          className="absolute z-10 cursor-grab active:cursor-grabbing group" 
           style={{ right: '30%', top: '10%' }}
         >
+          <div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-black text-[#F4F04E] text-xs font-bold px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-50 border-2 border-black shadow-[2px_2px_0px_#000]">
+            Drag me!
+          </div>
           <WindowFrame title={heroData.extrude_preview.role} style={{ width: '360px' }}>
             <div className="p-6 bg-white border-t-2 border-black select-none">
               <div className="flex justify-between items-center mb-4">
                 <h3 className="text-xl font-black uppercase text-black">{heroData.extrude_preview.headline}</h3>
                 <span className="text-3xl">{heroData.extrude_preview.icon}</span>
               </div>
-              <div className="aspect-video bg-[#0101FE] border-2 border-black" />
+              <div className="aspect-video bg-[#0101FE] border-2 border-black relative overflow-hidden">
+                <img src="/fontSamples/3.png" alt="Extrude effect preview" className="w-full h-full object-cover" />
+              </div>
             </div>
           </WindowFrame>
         </motion.div>
@@ -76,9 +84,12 @@ export default function HeroVibeGrid() {
           dragConstraints={scrollRef}
           dragMomentum={false}
           custom={2} initial="hidden" animate="visible" variants={windowVariants}
-          className="absolute z-40 cursor-grab active:cursor-grabbing" 
+          className="absolute z-40 cursor-grab active:cursor-grabbing group" 
           style={{ right: '40%', bottom: '30%' }}
         >
+          <div className="absolute -top-8 left-1/2 -translate-x-1/2 bg-black text-[#F4F04E] text-xs font-bold px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-50 border-2 border-black shadow-[2px_2px_0px_#000]">
+            Drag me!
+          </div>
           <WindowFrame title={heroData.inflated_preview.role} style={{ width: '320px' }}>
             <div className="p-6 bg-white border-t-2 border-black select-none">
                <h3 className="text-lg font-black uppercase mb-2">{heroData.inflated_preview.headline}</h3>

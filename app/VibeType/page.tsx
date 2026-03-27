@@ -3,7 +3,7 @@ import HeroVibeGrid from "../Components/HeroProject/HeroVibeGrid";
 import EngineInspector from "../Components/TerminalContent/TerminalContent";
 import ProjectBackgroundEffect from "../Components/ProjectBackgroundEffect/ProjectBackgroundEffect";
 
-export default function Projects(){
+export default function VibeType(){
     return (
         <main className="flex flex-col  relative">
         <HeroVibeGrid/>

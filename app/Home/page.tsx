@@ -5,10 +5,11 @@ import Footer from "../Components/Footer/Footer";
 import ProjectSliderWrapper from "../Components/ProjectsSliderComponent/ProjectSliderWrapper";
 import { FloatingWhatsAppAvatar } from "../Components/FloatingWhatsappAvatar/FloatingWhatsappAvater";
 import AboutDeveloperCard from "../Components/AboutDeveloperCard/AboutDeveloperCard";
+import IntroWrapper from '../Components/Intro/IntroWrapper';
 const Home = () => {
     return (
         <main className=" min-h-[100vh] relative">
-      {/* <IntroWrapper /> */}
+      <IntroWrapper />
       <div className="grain-effect"></div>
 
       <AnimatedClipContainer />

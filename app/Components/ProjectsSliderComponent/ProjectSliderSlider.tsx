@@ -160,7 +160,7 @@ const ProjectSliderSlider = () => {
                                                 {/* Visual Cue */}
                                                 <div className="w-full text-center py-4 bg-[#4f52be]/10">
                                                     <p className="text-sm font-bold text-[#4f52be] tracking-wider uppercase flex items-center justify-center gap-2">
-                                                        <span>←</span> Click anywhere to go back to projects <span>→</span>
+                                                        <span>←</span> Click anywhere to go back to VibeType <span>→</span>
                                                     </p>
                                                 </div>
                                                 <div className="flex-grow w-full h-full p-4 overflow-y-auto">
