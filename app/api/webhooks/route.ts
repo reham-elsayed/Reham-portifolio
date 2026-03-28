@@ -2,38 +2,48 @@ import { NextResponse } from 'next/server';
 import crypto from 'crypto';
 
 export async function POST(req: Request) {
-  const payload = await req.json();
+  // --- EDGE CASE 1: Security (Authenticity) ---
+  // Verify the request actually came from GitHub using the Secret you set in the repo settings.
   const signature = req.headers.get('x-hub-signature-256');
-
-  // 1. Security Check (Optional but Recommended)
-  // Verify that this actually came from your GitHub
-  const hmac = crypto.createHmac('sha256', process.env.GITHUB_WEBHOOK_SECRET!);
-  const digest = 'sha256=' + hmac.update(JSON.stringify(payload)).digest('hex');
+  const bodyText = await req.text(); // Get raw text for signature verification
   
-  if (signature !== digest) {
+  const hmac = crypto.createHmac('sha256', process.env.GITHUB_WEBHOOK_SECRET!);
+  const expectedSignature = `sha256=${hmac.update(bodyText).digest('hex')}`;
+
+  if (!signature || !crypto.timingSafeEqual(Buffer.from(signature), Buffer.from(expectedSignature))) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
-  const commitMessage = payload.head_commit?.message;
-  const repoName = payload.repository.name;
+  const payload = JSON.parse(bodyText);
 
-  if (!commitMessage || commitMessage.includes('chore:')) {
-    return NextResponse.json({ message: 'Skipping minor update' });
+  // --- EDGE CASE 2: Noisy Commits ---
+  // Don't post about "chore", "fix", or "test" commits. Only post about "feat" (Features).
+  const latestCommit = payload.head_commit;
+  if (!latestCommit?.message.startsWith('feat:')) {
+    return NextResponse.json({ message: 'Skipped: Not a feature commit' }, { status: 200 });
   }
 
-  // 2. AI Translation for Designers
-  const aiPrompt = `
-    Context: I am working on a project called ${repoName}. 
-    Recent Update: "${commitMessage}"
-    Task: Write a punchy LinkedIn post for Canva Designers and Social Media Managers. 
-    Focus on benefits (speed, quality, trendiness). No 'dev' jargon like 'refactored' or 'fixed bug'.
-  `;
+  // --- EDGE CASE 3: Avoid "Double Posting" ---
+  // GitHub sometimes retries webhooks. Use the unique Delivery ID to prevent duplicates.
+  const deliveryId = req.headers.get('x-github-delivery');
+  // Optional: Check deliveryId against a simple Vercel KV or database.
 
-  // Call your AI API (Gemini/OpenAI) here...
-  // const postContent = await callAI(aiPrompt);
+  try {
+    // 2. Translate Commit to "Designer Speak" via AI
+    const postContent = await generateAIPost(latestCommit.message, payload.repository.name);
 
-  // 3. Post to LinkedIn
-  // await postToLinkedIn(postContent);
+    // 3. Post to LinkedIn
+    const result = await postToLinkedIn(postContent);
 
-  return NextResponse.json({ success: true, repo: repoName });
+    return NextResponse.json({ success: true, linkedInId: result.id });
+  } catch (error: any) {
+    console.error('Webhook Error:', error.message);
+    
+    // --- EDGE CASE 4: LinkedIn Token Expiry ---
+    if (error.status === 401) {
+      // Logic to send yourself an email: "Hey, your LinkedIn Token expired!"
+    }
+
+    return NextResponse.json({ error: 'Processing failed' }, { status: 500 });
+  }
 }
