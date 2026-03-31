@@ -30,7 +30,7 @@ export default function TermsPage() {
   return (
     <main className="min-h-screen bg-[#fdfd96] font-mono px-4 pb-20 pt-24 md:pt-32">
       
-      {/* NAVIGATION BAR - Consistent with Privacy Page */}
+    
       <nav className="max-w-5xl mx-auto mb-12">
         <Link 
           href="/VibeType" 
