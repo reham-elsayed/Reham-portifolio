@@ -34,8 +34,8 @@ export default function ScrollAnimatedText({ text, className, moveDown }: Props)
 
                 style={{
                     y: invertedY,
-                    fontVariationSettings: `"wght" ${weight}, "wdth" ${width}`,
-                    fontFamily: "Geist Variable, sans-serif", // must be a variable font
+                    fontVariationSettings: `"wght" ${weight}`,
+                    fontFamily: "var(--font-inter)", // must be a variable font
                     fontSize: fontSize,
                     transformStyle: "preserve-3d",
                 }}

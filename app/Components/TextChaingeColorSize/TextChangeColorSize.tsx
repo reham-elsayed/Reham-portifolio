@@ -32,9 +32,9 @@ const TextChangeColorSize = ({ colorStart, colorEnd ,text}: TextChaingeColorSize
                         scale,
                         color,
                         fontSize: textSize,
-                        fontFamily: "Geist Variable, sans-serif",
+                        fontFamily: "var(--font-inter)",
                         transformStyle: "preserve-3d",
-                        fontVariationSettings: `"wght" ${weight.get()},"wdth" ${width.get()}`,
+                        fontVariationSettings: `"wght" ${weight.get()}`,
                     }}
                     className='  font-bold flex-1  will-change-scroll '
                 >{text}</motion.h1>

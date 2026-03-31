@@ -32,16 +32,13 @@ const AnimatedClipContainer = () => {
                                 className={`bg-[#e5e2d6] w-full z-10 wrapper-h1 p-3`}>
                                 {/* Big scroll space so you can see effect */}
                                 <motion.div
-                                    initial={{ translateY: 50 }}
-                                    animate={{ translateY: 0 }}
                                     style={{
-                                        fontVariationSettings: `"wght" ${weight}, "wdth" ${widthT}`,
-                                        fontFamily: "Geist Variable, sans-serif", // must be a variable font
+                                        fontVariationSettings: `"wght" ${weight}`,
+                                        fontFamily: "var(--font-inter)",
                                         fontSize: fontSize,
                                         y,
                                         transformStyle: "preserve-3d",
                                     }}
-                                    transition={{ duration: 50 }}
                                     className="text-center hero-txt"
                                 >
                                     {hero[0].text2}
@@ -53,16 +50,13 @@ const AnimatedClipContainer = () => {
                                 className={`bg-[#e5e2d6] w-full z-10 wrapper-h1 p-3`}>
                                 {/* Big scroll space so you can see effect */}
                                 <motion.div
-                                    initial={{ translateY: 50 }}
-                                    animate={{ translateY: 0 }}
                                     style={{
                                         y,
-                                        fontVariationSettings: `"wght" ${weight}, "wdth" ${widthT}`,
-                                        fontFamily: "Geist Variable, sans-serif", // must be a variable font
+                                        fontVariationSettings: `"wght" ${weight}`,
+                                        fontFamily: "var(--font-inter)",
                                         fontSize: fontSize,
                                         transformStyle: "preserve-3d",
                                     }}
-                                    transition={{ duration: 50 }}
                                     className="text-center hero-txt"
                                 >
                                     {hero[0].text1}
@@ -99,8 +93,8 @@ const AnimatedClipContainer = () => {
 
                                     style={{
                                         y: invertedY,
-                                        fontVariationSettings: `"wght" ${weight}, "wdth" ${widthT}`,
-                                        fontFamily: "Geist Variable, sans-serif", // must be a variable font
+                                        fontVariationSettings: `"wght" ${weight}`,
+                                        fontFamily: "var(--font-inter)", // must be a variable font
                                         fontSize: fontSize,
                                         transformStyle: "preserve-3d",
                                     }}
@@ -118,8 +112,8 @@ const AnimatedClipContainer = () => {
 
                                     style={{
                                         y: invertedY,
-                                        fontVariationSettings: `"wght" ${weight}, "wdth" ${widthT}`,
-                                        fontFamily: "Geist Variable, sans-serif", // must be a variable font
+                                        fontVariationSettings: `"wght" ${weight}`,
+                                        fontFamily: "var(--font-inter)", // must be a variable font
                                         fontSize: fontSize,
                                         transformStyle: "preserve-3d",
                                     }}

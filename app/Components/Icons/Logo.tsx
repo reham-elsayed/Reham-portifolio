@@ -2,7 +2,7 @@ import React from 'react'
 
 const Logo = () => {
     return (
-        <svg width="160" height="117" viewBox="0 0 770 520" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+        <svg width="100%" height="100%" viewBox="0 0 770 520" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
             <rect width="770" height="520" rx="18" fill="url(#pattern0_8_8)" />
             <defs>
                 <pattern id="pattern0_8_8" patternContentUnits="objectBoundingBox" width="1" height="1">

@@ -1,0 +1,22 @@
+{
+  "appName": "Text Effects",
+  "developer": "Reham Elsayed",
+  "lastUpdated": "March 2026",
+  "sections": [
+    {
+      "id": "usage",
+      "title": "01. USAGE RIGHTS",
+      "content": "You are free to use the generated SVG text effects for both personal and commercial Canva projects. No attribution required, but we love it if you do!"
+    },
+    {
+      "id": "data",
+      "title": "02. DATA & PRIVACY",
+      "content": "We don't store your text or designs. Everything happens in your browser (Client-side). Your creativity stays yours."
+    },
+    {
+      "id": "liability",
+      "title": "03. NO BUGS? NO PROMISES",
+      "content": "While we strive for perfection in every SVG path, the app is provided 'as-is'. We aren't responsible for any design mishaps."
+    }
+  ]
+}
