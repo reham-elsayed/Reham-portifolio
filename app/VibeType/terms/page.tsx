@@ -41,10 +41,10 @@ export default function TermsPage() {
         </Link>
       </nav>
 
-      {/* MAIN CONTENT CONTAINER */}
+ 
       <div className="max-w-5xl mx-auto">
         
-        {/* Header Section */}
+       
         <header className="relative mb-20">
           <div className="absolute -inset-2 bg-pink-500 transform rotate-1"></div>
           <div className="relative bg-white border-4 border-black p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
