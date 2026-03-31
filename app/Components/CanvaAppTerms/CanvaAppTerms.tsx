@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export const TermsSection = () => {
   const terms = [
     {
@@ -44,12 +46,12 @@ export const TermsSection = () => {
         <div className="mt-16 p-8 bg-cyan-300 border-4 border-black shadow-[10px_10px_0px_0px_rgba(0,0,0,1)]">
           <h3 className="text-2xl font-black mb-4 uppercase">Need Support?</h3>
           <p className="font-bold mb-6">Got a bug or a feature request? Hit me up directly!</p>
-          <a 
-            href="mailto:rehamshipl666@gmail.com"
+          <Link 
+            href="/VibeType/support"
             className="inline-block bg-yellow-400 border-4 border-black px-8 py-3 font-black text-xl hover:bg-white transition-colors shadow-[5px_5px_0px_0px_rgba(0,0,0,1)]"
           >
-            SEND AN EMAIL
-          </a>
+            VIEW SUPPORT DETAILS
+          </Link>
         </div>
       </div>
     </section>

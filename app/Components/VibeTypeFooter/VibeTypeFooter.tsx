@@ -9,7 +9,7 @@ export const VibeFooter = () => {
         <div className="flex gap-8 font-bold text-lg">
           <Link href="/VibeType/privacy-policy" className="hover:text-yellow-300 transition-colors underline decoration-2">PRIVACY</Link>
           <Link href="/VibeType/terms" className="hover:text-pink-400 transition-colors underline decoration-2">TERMS</Link>
-          <Link href="mailto:rehamshipl666@gmail.com" className="hover:text-cyan-300 transition-colors underline decoration-2">SUPPORT</Link>
+          <Link href="/VibeType/support" className="hover:text-cyan-300 transition-colors underline decoration-2">SUPPORT</Link>
         </div>
       </div>
     </footer>

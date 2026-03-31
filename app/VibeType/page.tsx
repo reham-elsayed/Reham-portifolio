@@ -13,6 +13,7 @@ export default function VibeType(){
         <EngineInspector/>
         <EffectsGrid/>
         <TermsSection/>
+        <VibeFooter/>
     
         </>
     )
