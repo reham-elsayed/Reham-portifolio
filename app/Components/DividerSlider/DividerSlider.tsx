@@ -20,14 +20,14 @@ const DividerSlider = () => {
                         style={{ x }}
                         transition={{ duration: 5 }}
                         className='relative flex items-stretch justify-center  text-9xl text-nowrap'>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid atque nostrum odio sit, voluptatibus consectetur dicta perspiciatis nam est cumque?
+                        FRONTEND DEVELOPMENT • REACT • NEXT.JS • TAILWIND CSS • UI/UX DESIGN • WEB ANIMATIONS • TYPESCRIPT • MODERN INTERFACES • SCALABLE WEB APPS • DESIGN SYSTEMS • API INTEGRATION • RESPONSIVE DESIGN •
                     </motion.div>
 
                     <motion.div
                         style={{ x: xx }}
                         transition={{ duration: 5 }}
                         className='relative flex items-stretch justify-center text-9xl text-nowrap'>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid atque nostrum odio sit, voluptatibus consectetur dicta perspiciatis nam est cumque?
+                        FRONTEND DEVELOPMENT • REACT • NEXT.JS • TAILWIND CSS • UI/UX DESIGN • WEB ANIMATIONS • TYPESCRIPT • MODERN INTERFACES • SCALABLE WEB APPS • DESIGN SYSTEMS • API INTEGRATION • RESPONSIVE DESIGN •
                     </motion.div>
 
                 </div>
