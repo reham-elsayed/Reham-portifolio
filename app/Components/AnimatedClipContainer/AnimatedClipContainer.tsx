@@ -30,7 +30,7 @@ const AnimatedClipContainer = () => {
                             <div
 
                                 className={`bg-[#e5e2d6] w-full z-10 wrapper-h1 p-3`}>
-                                {/* Big scroll space so you can see effect */}
+                                {/* Big scroll space to see effect */}
                                 <motion.div
                                     style={{
                                         fontVariationSettings: `"wght" ${weight}`,
