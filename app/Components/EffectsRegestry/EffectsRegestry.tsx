@@ -22,7 +22,7 @@ export default function EffectsGrid() {
     <section className="py-24 px-10 bg-[#e5e2d6] border-t-4 border-black">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-6xl font-black uppercase tracking-tighter mb-16 text-black">
-          Available Engines
+          Key Features
         </h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">

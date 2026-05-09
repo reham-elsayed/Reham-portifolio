@@ -6,7 +6,7 @@ export default function WarningBanner() {
       <div className="flex items-center justify-center gap-4">
         <div className="w-0 h-0 border-l-[12px] border-l-transparent border-r-[12px] border-r-transparent border-b-[20px] border-b-[#292f33]"></div>
         <span className="font-mono uppercase font-bold tracking-widest text-[#e5e2d6] text-sm md:text-base">
-          Pro-Level Typography Engines Active
+          Lottie Speed Reading Engine Active
         </span>
         <div className="w-0 h-0 border-l-[12px] border-l-transparent border-r-[12px] border-r-transparent border-b-[20px] border-b-[#292f33]"></div>
       </div>

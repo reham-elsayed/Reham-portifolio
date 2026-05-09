@@ -4,26 +4,27 @@ import { Timer, Layers, CheckCircle2 } from 'lucide-react';
 const designSpecs = [
   { 
     icon: Timer, 
-    label: 'DESIGN TIME', 
-    value: '-90%', 
+    label: 'READING SPEED', 
+    value: '1000 WPM', 
     color: '#18DD3D', 
-    desc: 'Faster than manual layering' 
+    desc: 'Variable speed control' 
   },
   { 
     icon: Layers, 
-    label: 'TREND SCALE', 
-    value: '7-STYLE', 
+    label: 'VECTOR ACCURACY', 
+    value: '100%', 
     color: '#ddab45', 
-    desc: 'Y2K, Retro, & 3D Pre-baked' 
+    desc: 'Path-based glyph rendering' 
   },
   { 
     icon: CheckCircle2, 
-    label: 'PRINT SPEC', 
-    value: '300DPI', 
+    label: 'LANG SUPPORT', 
+    value: 'AR/EN', 
     color: '#FE41A0', 
-    desc: 'Crystal clear SVG export' 
+    desc: 'Full BIDI & Arabic logic' 
   }
 ];
+
 
 export default function TerminalStats() {
   return (

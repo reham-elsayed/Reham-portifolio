@@ -110,7 +110,10 @@ const ProjectSliderSlider = () => {
                                         className={` w-full h-full transition-all duration-1000 relative `}
                                     >
                                         {/* Card Content - Animated out when open */}
-                                      <WindowFrame style={{ 
+                                      <WindowFrame 
+                                          headerColor="#f6c918ff"
+                                          backgroundColor="#e5e2d6"
+                                          style={{ 
                                           position: 'relative', 
                                           width: '100%', 
                                           height: '100%',
@@ -120,16 +123,16 @@ const ProjectSliderSlider = () => {
                                       }}>
                                           <div
                                             className={`
-                                                gap-1 relative bg-[#e5e2d6] p-4 h-full w-full flex flex-col 
+                                                gap-1 relative p-4 h-full w-full flex flex-col 
                                                 hover:scale-[1.02] hover:-translate-y-1 transition-all duration-300
                                                 transform
                                                 ${openDetails && i === index ? '-translate-y-[150%] opacity-0' : 'translate-y-0 opacity-100'}
                                             `}
                                         >
-                                            <div className={` h-[200px] relative flex items-center justify-center mb-4 bg-white border-2 border-[#292f33] rounded-md p-2`}>
+                                            <div className={` h-[400px] relative flex items-center justify-center mb-4 bg-white border-2 border-[#292f33] rounded-md p-2`}>
                                                 <Image
-                                                    src={project.images[0]}
-                                                    alt={project.name}
+                                                    src={project?.images[0]}
+                                                    alt={project?.name || ""}
                                                     fill
                                                     style={{ objectFit: 'cover' }}
                                                 />

@@ -1,18 +1,26 @@
 import Link from "next/link";
 
 export const TermsSection = () => {
-  const terms = [
+  const steps = [
     {
-      title: "01. USAGE RIGHTS",
-      content: "Feel free to use the generated SVG text effects for both personal and commercial Canva projects. You own your creations!"
+      title: "01. INPUT TEXT",
+      content: "Paste your reading material into the text area. The engine will automatically parse and prepare it for RSVP rendering."
     },
     {
-      title: "02. DATA PRIVACY",
-      content: "We don't store your data. All text-to-SVG generation happens locally in your Canva editor. No tracking, no logs."
+      title: "02. SET SPEED",
+      content: "Adjust the WPM (Words Per Minute) to your comfort level. 300 WPM is a great starting point for beginners."
     },
     {
-      title: "03. LIMITATIONS",
-      content: "The app is provided 'as-is'. While we aim for pixel-perfect effects, we are not liable for any design errors during export."
+      title: "03. CUSTOMIZE LOOK",
+      content: "Select a font, size, and color that suits your design. All glyphs are converted to vector paths for perfect clarity."
+    },
+    {
+      title: "04. ENABLE HIGHLIGHTING",
+      content: "Toggle 'Highlight Middle Letter' for an enhanced speed-reading experience by focusing on the Optimal Recognition Point."
+    },
+    {
+      title: "05. GENERATE",
+      content: "Click 'Generate Lottie Runner'. The app will process, upload, and place the animation directly onto your Canva design."
     }
   ];
 
@@ -22,21 +30,21 @@ export const TermsSection = () => {
         {/* Header with 90s Vibe */}
         <div className="bg-black text-white p-4 inline-block mb-12 transform -rotate-2 border-2 border-black shadow-[8px_8px_0px_0px_rgba(255,105,180,1)]">
           <h2 className="text-4xl font-black uppercase tracking-tighter">
-            Terms of Service
+            How to Use
           </h2>
         </div>
 
         <div className="grid gap-8">
-          {terms.map((term, index) => (
+          {steps.map((step, index) => (
             <div 
               key={index} 
               className="bg-white border-4 border-black p-6 shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all"
             >
               <h3 className="text-2xl font-black mb-3 text-pink-500 uppercase italic">
-                {term.title}
+                {step.title}
               </h3>
               <p className="text-lg leading-relaxed font-bold text-gray-800">
-                {term.content}
+                {step.content}
               </p>
             </div>
           ))}

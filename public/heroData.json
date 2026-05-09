@@ -1,23 +1,23 @@
 {
   "tagline_card": {
-    "id": "hero-1",
-    "role": "vortex.sys",
-    "headline": "Pro-Level Typography for Canva",
-    "content": "Transform standard fonts into **layered**, **textured**, and **3D** masterpieces without leaving your canvas.",
+    "id": "lottie-1",
+    "role": "speed_reader.sys",
+    "headline": "Lottie Word Runner",
+    "content": "High-performance **speed-reading** tool for Canva that converts text into vector-perfect **Lottie animations**.",
     "icon": "⚡"
   },
   "extrude_preview": {
-    "id": "hero-2",
-    "role": "effect.extrude",
-    "headline": "Retro Depth",
-    "content": "Stackable **3D layers** with offset math for that classic 90s arcade aesthetic.",
-    "icon": "🕹️"
+    "id": "lottie-2",
+    "role": "renderer.vector",
+    "headline": "Vector RSVP",
+    "content": "Uses **opentype.js** to convert glyphs into shape paths for **infinite scalability**.",
+    "icon": "🎯"
   },
   "inflated_preview": {
-    "id": "hero-3",
-    "role": "effect.inflated",
-    "headline": "Balloon Volume",
-    "content": "Computational **puff logic** using inner shadows and specular highlights.",
-    "icon": "🎈"
+    "id": "lottie-3",
+    "role": "support.bidi",
+    "headline": "Global Text",
+    "content": "Full **Arabic & RTL** support with character reshaping and **BIDI logic**.",
+    "icon": "🌍"
   }
-}
+}

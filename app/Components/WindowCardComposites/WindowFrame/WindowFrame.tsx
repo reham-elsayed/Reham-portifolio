@@ -3,14 +3,16 @@ import styles from '../Presenters.module.css';
 
 interface WindowFrameProps {
   title?: string;
-  children: ReactNode; // This is crucial for composition
-  style?: React.CSSProperties; // Allowing custom positioning (top/left)
+  children: ReactNode;
+  style?: React.CSSProperties;
+  headerColor?: string;
+  backgroundColor?: string;
 }
 
-const WindowFrame: React.FC<WindowFrameProps> = ({ title, children, style }) => {
+const WindowFrame: React.FC<WindowFrameProps> = ({ title, children, style, headerColor, backgroundColor }) => {
   return (
-    <div className={styles.window} style={style}>
-      <div className={styles.header}>
+    <div className={styles.window} style={{ ...style, backgroundColor: backgroundColor || 'white' }}>
+      <div className={styles.header} style={{ backgroundColor: headerColor || '#F4F04E' }}>
         <span className={styles.title}>{title}</span>
         {/* We can add standard controls like min/max/close here later */}
       </div>
