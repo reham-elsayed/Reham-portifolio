@@ -46,9 +46,14 @@ export default function HeroVibeGrid() {
                   i % 2 === 1 ? <span key={i} className="bg-[#F4F04E] border border-black px-1 shadow-[2px_2px_0px_#000]">{part}</span> : part
                 )}
               </p>
-              <button className="mt-2 bg-black text-white font-black py-4 px-8 uppercase tracking-widest hover:bg-[#4F52BE] transition-all active:scale-95 shadow-[4px_4px_0px_#000]">
-                Open in Canva
-              </button>
+             <a
+  href="https://www.canva.com/your-apps/AAHAANrCwSs/word-runner?q=word+runner"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mt-2 bg-black text-white font-black py-4 px-8 uppercase tracking-widest hover:bg-[#4F52BE] transition-all active:scale-95 shadow-[4px_4px_0px_#000]"
+>
+  Open in Canva
+</a>
             </div>
           </WindowFrame>
         </motion.div>
